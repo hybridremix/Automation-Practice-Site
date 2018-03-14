@@ -59,7 +59,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthPageObject.cs" />
     <Compile Include="BrowserType.cs" />
+    <Compile Include="Pages\ContactPageObject.cs" />
     <Compile Include="Pages\IndexPageObject.cs" />
     <Compile Include="IndexPageTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

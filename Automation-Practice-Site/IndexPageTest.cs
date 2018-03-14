@@ -9,8 +9,10 @@ namespace Automation_Practice_Site
     [TestClass]
     public class IndexPageTest
     {
-        public IWebDriver   Chrome;
-        public IndexPageObject IndexPage;
+        public IWebDriver           Chrome;
+        public IndexPageObject      IndexPage;
+        public ContactPageObject    ContactPage;
+        public AuthPageObject       AuthPage;
 
         public IndexPageTest()
         {
