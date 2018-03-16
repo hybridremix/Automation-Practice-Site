@@ -59,13 +59,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuthPageObject.cs" />
+    <Compile Include="Pages\AuthPageObject.cs" />
     <Compile Include="BrowserType.cs" />
     <Compile Include="Pages\ContactPageObject.cs" />
     <Compile Include="Pages\IndexPageObject.cs" />
     <Compile Include="IndexPageTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pages\WebpageObject.cs" />
+    <Compile Include="Pages\WomensPageObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

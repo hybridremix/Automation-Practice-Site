@@ -6,8 +6,10 @@ namespace Automation_Practice_Site
     {
         public IWebElement ContactUsLink;
         public IWebElement SignInLink;
+        public IWebElement WomensLink;
 
-        public IndexPageObject()
+        public IndexPageObject(string webpageURL, string cssIdentifier, string assertMsg, string expectedText = "")
+                                    : base(webpageURL, cssIdentifier, assertMsg, expectedText)
         {
         }
     }
