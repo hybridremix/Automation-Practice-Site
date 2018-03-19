@@ -64,9 +64,11 @@
     <Compile Include="Pages\ContactPageObject.cs" />
     <Compile Include="Pages\IndexPageObject.cs" />
     <Compile Include="IndexPageTest.cs" />
+    <Compile Include="Slider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pages\WebpageObject.cs" />
     <Compile Include="Pages\WomensPageObject.cs" />
+    <Compile Include="Pages\SpecialsPageObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
