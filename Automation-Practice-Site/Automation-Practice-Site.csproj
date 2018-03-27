@@ -59,6 +59,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\ShopCartPageObject.cs" />
     <Compile Include="Pages\AuthPageObject.cs" />
     <Compile Include="BrowserType.cs" />
     <Compile Include="Pages\ContactPageObject.cs" />

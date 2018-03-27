@@ -16,6 +16,7 @@ namespace Automation_Practice_Site
         public AuthPageObject       AuthPage;
         public WomensPageObject     WomensPage;
         public SpecialsPageObject   SpecialsPage;
+        public ShopCartPageObject   ShopCartPage;
 
         public IndexPageTest()
         {
@@ -33,6 +34,9 @@ namespace Automation_Practice_Site
             SpecialsPage = new SpecialsPageObject("http://automationpractice.com/index.php?controller=prices-drop",
                 "navigation_page", "Element text is not 'Price Drop' for the object with class 'navigation_page'.",
                 "Price drop");
+            ShopCartPage = new ShopCartPageObject("http://automationpractice.com/index.php?controller=order",
+                "navigation_page", "Element text is not 'Your Shopping Cart' for the object with class 'navigation_page'.",
+                "Your shopping cart");
         }
 
         [TestMethod]
@@ -53,6 +57,16 @@ namespace Automation_Practice_Site
             Assert.AreEqual(AuthPage.VerificationText,
                 Chrome.FindElement(By.ClassName(AuthPage.VerificationIdentifier)).Text,
                 AuthPage.VerificationAssertMsg);
+        }
+
+        [TestMethod]
+        [TestCategory("IndexPage")]
+        public void OpenShoppingCart()
+        {
+            IndexPage.ShopCartLink.Click();
+            Assert.AreEqual(ShopCartPage.VerificationText,
+                Chrome.FindElement(By.ClassName(ShopCartPage.VerificationIdentifier)).Text,
+                ShopCartPage.VerificationAssertMsg);
         }
 
         [TestMethod]
@@ -106,6 +120,8 @@ namespace Automation_Practice_Site
             Chrome.Navigate().GoToUrl(IndexPage.PageURL);
             IndexPage.ContactUsLink = Chrome.FindElement(By.Id("contact-link"));
             IndexPage.SignInLink = Chrome.FindElement(By.ClassName("header_user_info"));
+            IndexPage.ShopCartLink = Chrome.FindElement(By.PartialLinkText("Cart"));
+
             IndexPage.HomeSlider.LeftArrow = Chrome.FindElement(By.ClassName("bx-prev"));
             IndexPage.HomeSlider.RightArrow = Chrome.FindElement(By.ClassName("bx-next"));
             for (var i = 0; i < IndexPage.HomeSlider.Slides.Length; i++)

@@ -6,6 +6,7 @@ namespace Automation_Practice_Site
     {
         public IWebElement ContactUsLink    { get; set; }
         public IWebElement SignInLink       { get; set; }
+        public IWebElement ShopCartLink     { get; set; }
         public IWebElement WomensLink       { get; set; }
         public IWebElement SpecialsLink     { get; set; }
         public Slider HomeSlider            { get; set; }
